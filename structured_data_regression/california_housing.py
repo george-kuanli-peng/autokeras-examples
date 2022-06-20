@@ -1,4 +1,4 @@
-"""California Housing
+"""California Housing Regression
 
 Adapted from [Structured Data Regression](https://autokeras.com/tutorial/structured_data_regression/)
 """
@@ -28,8 +28,9 @@ df[train_size:].to_csv(test_file_path, index=False)
 
 # Initialize the structured data regressor.
 reg = ak.StructuredDataRegressor(
+    project_name='california_housing',
     overwrite=True, max_trials=3
-)  # It tries 3 different models.
+)
 
 # Feed the structured data regressor with training data.
 reg.fit(
