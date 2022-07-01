@@ -58,6 +58,7 @@ def train(
     lookback, max_trials
 ):
     clf = ak.TimeseriesForecaster(
+        project_name='uci_air_quality',
         lookback=lookback,
         max_trials=max_trials,
         objective='val_loss'
